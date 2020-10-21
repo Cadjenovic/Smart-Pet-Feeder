@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Hranilica</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row" id="header-div">
+            <div class="col-1"></div>
+            <div class="col-6">
+                <h1>Petomatic 9000</h1>
+            </div>
+            <div class="col-5"></div>
+        </div>
+
+        <!-- Odeljak za menjanje vremena i punjenje hranilice -->
+        <div class="row" id="main-div">
+            <div class="col-1"></div>
+            <div class="col-4">
+                <div class="text">Next refill at: </div>
+                <div class="text" id="next-refill-time"> <div id="refill-time"><b id="time">12:00</b><button id="change-btn" onclick="change()"> Change </button></div><div id="refill-time-change"><input type="text" id="refill-time-change-text"><button id="done-btn" onclick="done()"> Done </button></div>  </div>
+
+                <div class="text">Portion size: </div>
+                <div>
+                    <select name="size" id="size" onchange="sendPortionSize()">
+                        <option value="100">100g</option>
+                        <option value="200">200g</option>
+                        <option value="300">300g</option>
+                    </select>
+                </div>
+                <div>
+                    <button id="refill-now-btn" onclick="refillNow()">Refill Now</button>
+                </div>
+            </div>
+            <div class="col-1"></div>
+
+            <!-- Komponente analognog sata -->
+            <div class="col-4">
+                <div class="clock">
+                    <div class="hand hour" data-hour></div>
+                    <div class="hand minute" data-minute></div>
+                    <div class="hand second" data-second></div>
+                    <div class="help hour" data-help-hour></div>
+                    <div class="help minute" data-help-minute></div>
+                    <div class="number number1">1</div>
+                    <div class="number number2">2</div>
+                    <div class="number number3">3</div>
+                    <div class="number number4">4</div>
+                    <div class="number number5">5</div>
+                    <div class="number number6">6</div>
+                    <div class="number number7">7</div>
+                    <div class="number number8">8</div>
+                    <div class="number number9">9</div>
+                    <div class="number number10">10</div>
+                    <div class="number number11">11</div>
+                    <div class="number number12">12</div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    
+    
+  
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="clockscript.js"></script>
+    <script src="generalscript.js"></script>
+</body>
+</html>
